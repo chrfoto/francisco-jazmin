@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda - Francisco & Jazmín</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #c5a059;
+            --dark-gold: #a67c37;
+            --cream: #fdfbf7;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--cream);
+            color: #333;
+            overflow-x: hidden;
+        }
+        .font-cursive { font-family: 'Great Vibes', cursive; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        
+        .hero-gradient {
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
+                        url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .border-gold { border-color: var(--gold); }
+        .text-gold { color: var(--gold); }
+        .bg-gold { background-color: var(--gold); }
+
+        .animate-fade-in {
+            animation: fadeIn 2s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .countdown-item {
+            min-width: 70px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 hero-gradient">
+        <div class="animate-fade-in space-y-6">
+            <h2 class="text-gold uppercase tracking-[0.3em] text-sm mb-4">Nuestra Boda</h2>
+            <h1 class="text-6xl md:text-8xl font-cursive text-gray-800">Francisco & Jazmín</h1>
+            <p class="text-xl md:text-2xl font-serif italic text-gray-600 mt-4">05 de Diciembre, 2026</p>
+            
+            <div class="w-24 h-px bg-gold mx-auto my-8"></div>
+            
+            <div class="max-w-md mx-auto italic text-gray-500 px-6">
+                <p class="text-lg">"Por tanto, lo que Dios ha unido, que no lo separe nadie."</p>
+                <p class="mt-2 font-bold">— Marcos 10:9</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cuenta Regresiva -->
+    <section class="py-12 bg-white border-y border-gray-100 shadow-inner">
+        <div class="container mx-auto px-4">
+            <h3 class="text-center text-gold uppercase tracking-widest text-xs mb-6 font-semibold">Faltan para el gran día</h3>
+            <div id="countdown" class="flex justify-center gap-4 text-center">
+                <div class="countdown-item">
+                    <span id="days" class="block text-3xl font-serif text-gray-800">00</span>
+                    <span class="text-[10px] uppercase tracking-tighter text-gray-400">Días</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours" class="block text-3xl font-serif text-gray-800">00</span>
+                    <span class="text-[10px] uppercase tracking-tighter text-gray-400">Horas</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes" class="block text-3xl font-serif text-gray-800">00</span>
+                    <span class="text-[10px] uppercase tracking-tighter text-gray-400">Min</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds" class="block text-3xl font-serif text-gray-800">00</span>
+                    <span class="text-[10px] uppercase tracking-tighter text-gray-400">Seg</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Los Padres y Padrinos -->
+    <section class="py-20 bg-[#fdfbf7]">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <h2 class="font-serif text-3xl text-gray-800 mb-12 italic">Con la bendición de nuestros padres</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-gold font-semibold uppercase text-xs tracking-widest mb-4">Padres de la Novia</h3>
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        Martha Alicia Guillén Ambriz<br>
+                        Ramón Zavala Herrera
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-gold font-semibold uppercase text-xs tracking-widest mb-4">Padres del Novio</h3>
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        J. Jesús Magaña Montejano<br>
+                        Ma. Elena Zavala Negrete
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-20">
+                <h3 class="text-gold font-semibold uppercase text-xs tracking-widest mb-4">Padrinos de Velación</h3>
+                <p class="text-gray-700 leading-relaxed text-lg">
+                    Andrés Zavala Herrera<br>
+                    Martha Arcelia Rico Galvan
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detalles del Evento -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="grid md:grid-cols-2 gap-16 items-start">
+                
+                <!-- Ceremonia -->
+                <div class="text-center space-y-4 p-8 border border-gray-50 rounded-2xl shadow-sm">
+                    <div class="text-gold text-4xl mb-4">⛪</div>
+                    <h2 class="font-serif text-3xl text-gray-800">Ceremonia Religiosa</h2>
+                    <p class="text-gray-500 uppercase tracking-widest text-xs font-bold">4:00 PM</p>
+                    <p class="text-xl text-gray-700 font-semibold">Templo Purépero</p>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        Purépero de Chilchota, Michoacán
+                    </p>
+                    <a href="https://maps.google.com/?q=19.909626,-102.007408" target="_blank" class="inline-block mt-4 px-6 py-2 border border-gold text-gold text-sm font-semibold rounded-full hover:bg-gold hover:text-white transition-all">Ver Ubicación</a>
+                </div>
+
+                <!-- Recepción -->
+                <div class="text-center space-y-4 p-8 border border-gray-50 rounded-2xl shadow-sm bg-[#fafafa]">
+                    <div class="text-gold text-4xl mb-4">🥂</div>
+                    <h2 class="font-serif text-3xl text-gray-800">Recepción</h2>
+                    <p class="text-gray-500 uppercase tracking-widest text-xs font-bold">5:00 PM</p>
+                    <p class="text-xl text-gray-700 font-semibold">Salón Presidencial</p>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        Calle Santa María #205<br>
+                        Fraccionamiento la soledad
+                    </p>
+                    <a href="https://maps.google.com/?q=19.906845,-101.995842" target="_blank" class="inline-block mt-4 px-6 py-2 border border-gold text-gold text-sm font-semibold rounded-full hover:bg-gold hover:text-white transition-all">Ver Ubicación</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Código de Vestimenta -->
+    <section class="py-20 bg-[#1a1a1a] text-white text-center">
+        <div class="container mx-auto px-6">
+            <h3 class="text-gold uppercase tracking-[0.3em] text-xs mb-6">Dress Code</h3>
+            <h2 class="text-4xl font-serif mb-6">FORMAL</h2>
+            <p class="max-w-md mx-auto text-gray-400 font-light italic">
+                Agradecemos su asistencia portando sus mejores galas para celebrar este momento inolvidable.
+            </p>
+        </div>
+    </section>
+
+    <!-- Confirmación -->
+    <section class="py-24 bg-white text-center">
+        <div class="container mx-auto px-6 max-w-xl">
+            <h2 class="font-serif text-4xl mb-8">Confirmación</h2>
+            <p class="text-gray-600 mb-4 uppercase tracking-widest text-xs">Agradecemos confirmar antes del</p>
+            <p class="text-2xl text-gray-800 font-serif mb-10 italic">30 de Octubre de 2026</p>
+            
+            <a href="https://wa.me/524361220575?text=Hola%20Francisco%20y%20Jazmin!%20Confirmo%20mi%20asistencia%20a%20su%20boda." 
+               class="inline-flex items-center justify-center px-10 py-4 bg-gold text-white rounded-full text-sm font-semibold tracking-widest uppercase hover:bg-dark-gold transition-all transform hover:scale-105 shadow-xl">
+                <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835c1.406.832 3.12 1.305 4.927 1.305 5.048 0 9.157-4.109 9.16-9.157.002-2.446-.949-4.746-2.679-6.477-1.73-1.73-4.032-2.68-6.477-2.682-5.047 0-9.156 4.109-9.159 9.158-.002 1.736.488 3.426 1.416 4.912l-.985 3.593 3.697-.97zM16.963 14.345c-.302-.15-1.785-.882-2.062-.982-.277-.1-.478-.15-.678.15-.2.3-.775.982-.95 1.182-.175.2-.35.225-.651.075-.302-.15-1.273-.469-2.424-1.495-.896-.799-1.501-1.786-1.677-2.086-.175-.3-.018-.463.132-.612.135-.133.302-.35.452-.525.151-.175.201-.3.301-.5.1-.2.05-.375-.025-.525-.075-.15-.677-1.633-.928-2.233-.243-.584-.49-.505-.678-.515-.175-.008-.375-.01-.575-.01s-.525.075-.8.375c-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.115 3.231 5.123 4.531.715.309 1.273.494 1.708.633.718.228 1.37.196 1.885.119.574-.086 1.785-.73 2.036-1.434.25-.703.25-1.306.175-1.433-.075-.127-.275-.202-.577-.352z"/>
+                </svg>
+                Confirmar por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-[#fdfbf7] text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="font-cursive text-3xl text-gray-400">Francisco & Jazmín</h2>
+            <p class="text-[10px] text-gray-400 mt-4 uppercase tracking-[0.2em]">05 • 12 • 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica de la Cuenta Regresiva
+        const weddingDate = new Date("Dec 5, 2026 16:00:00").getTime();
+
+        const countdown = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.getElementById("countdown").innerHTML = "<p class='text-gold font-serif text-2xl'>¡Hoy es el gran día!</p>";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
